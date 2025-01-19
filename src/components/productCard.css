@@ -1,0 +1,36 @@
+/* ProductCard.css */
+
+div {
+  display: inline-block;
+  width: 450px;
+  background-color: #72f3c2;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+span {
+  display: block;
+  font-size: 14px;
+  color: #8d0c0c;
+}
+
+span:first-of-type {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #34076e;
+  
+}
