@@ -1,21 +1,20 @@
-import { TbBrandBooking } from 'react-icons/tb';
 import './App.css';
-import ProductCard from './components/productCards';
-import { GoGraph } from "react-icons/go";
-import { MdOutlineSpeaker, MdSupervisedUserCircle } from 'react-icons/md';
-import AdminPage from './components/adminPage';
+import AdminPage from './admin/adminPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './home/homePage';
+
 
 
 function App() {
     return (
+    <BrowserRouter>
+        <Routes path="/*">
+            <Route path="/admin/*" element={<AdminPage />}/>
+            <Route path="/*" element={<HomePage/>}/>
+        </Routes>
 
-        <div className="App">
-            <AdminPage/>
-        </div>
-    
+    </BrowserRouter>
     );
-
-  
 }
 
 export default App
