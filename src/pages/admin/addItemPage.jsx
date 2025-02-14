@@ -7,14 +7,14 @@ export default function AddItemPage() {
   const [productKey, setProductKey] = useState("");
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState(0);
-  const [productCatogory, setProductCatogory] = useState("Audio");
-  const [productDemention, setProductDemention] = useState("");
-  const [productDiscription, setProductDiscription] = useState("");
+  const [productCategory, setProductCategory] = useState("Audio");
+  const [productDimention, setProductDimention] = useState("");
+  const [productDescription, setProductDescription] = useState("");
   const navigate = useNavigate();
 
   async function handleAddProduct() {
     
-    console.log(productKey, productName, productPrice, productCatogory, productDemention, productDiscription);
+    console.log(productKey, productName, productPrice, productCategory, productDimention, productDescription);
     const token = localStorage.getItem("token");
 
     if (token) {
@@ -25,9 +25,9 @@ export default function AddItemPage() {
             key: productKey,
             name: productName,
             price: productPrice,
-            catagory: productCatogory,
-            dimensions: productDemention,
-            description: productDiscription,
+            category: productCategory,
+            dimensions: productDimention,
+            description: productDescription,
           },
           {
             headers: {
@@ -47,6 +47,7 @@ export default function AddItemPage() {
     }
 
   }
+  
 
   return (
     <div className="w-full h-screen bg-gray-50 flex justify-center items-center">
@@ -75,8 +76,8 @@ export default function AddItemPage() {
             className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <select
-            value={productCatogory}
-            onChange={(e) => setProductCatogory(e.target.value)}
+            value={productCategory}
+            onChange={(e) => setProductCategory(e.target.value)}
             className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select Category</option>
@@ -84,15 +85,15 @@ export default function AddItemPage() {
             <option value="lights">Lights</option>
           </select>
           <input
-            onChange={(e) => setProductDemention(e.target.value)}
-            value={productDemention}
+            onChange={(e) => setProductDimention(e.target.value)}
+            value={productDimention}
             type="text"
             placeholder="Product Dimension"
             className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <input
-            onChange={(e) => setProductDiscription(e.target.value)}
-            value={productDiscription}
+            onChange={(e) => setProductDescription(e.target.value)}
+            value={productDescription}
             type="text"
             placeholder="Product Description"
             className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
