@@ -4,6 +4,7 @@ import { TbBrandBooking } from "react-icons/tb";
 import { Routes, Route, Link } from "react-router-dom";
 import AdminItemPage from "./adminItemPage";
 import AddItemPage from "./addItemPage";
+import UpdateItemPage from "./updateItemPage";
 
 
 export default function AdminPage() {
@@ -43,6 +44,7 @@ export default function AdminPage() {
                 <Route path="/items/*" element={<AdminItemPage/>}/>
                 <Route path="/users/*" element={<h1>Users</h1>}/>
                 <Route path="/items/add" element={<AddItemPage/>}/>
+                <Route path="/items/edit" element={<UpdateItemPage/>}/>
             </Routes>
 
          </div>

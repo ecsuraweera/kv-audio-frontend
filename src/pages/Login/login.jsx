@@ -12,12 +12,14 @@ export default function LoginPage() {
 
     function login(){
         console.log(email, password)
+        const backendUrl= import.meta.env.VITE_BACKEND_URL
 
-        axios.post('http://localhost:3000/api/users/login', {
+        axios.post(`${backendUrl}/api/users/login`, 
+            {
             email:email,
             password:password
-        }).then(res => {
-
+            })
+            .then(res => {
             console.log(res);
             toast.success("Login Successful");
             const user = res.data.user;
