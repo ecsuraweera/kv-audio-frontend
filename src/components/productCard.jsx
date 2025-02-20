@@ -4,7 +4,7 @@ export default function ProductCard({ item }) {
     const placeholderImage = "https://via.placeholder.com/300x200?text=No+Image";
 
     return (
-        <div className="bg-white shadow-lg p-4 w-[250px] h-[520px] transition-transform transform hover:scale-105 hover:bg-blue-100 flex flex-col gap-2 m-1">
+        <div className="bg-white shadow-lg p-4 w-[250px] h-[520px] transition-transform transform hover:scale-105 hover:bg-secondary flex flex-col gap-2 m-1">
             {/* Product Image */}
             <img 
                 src={item.image?.[0] || placeholderImage} 
@@ -15,7 +15,7 @@ export default function ProductCard({ item }) {
             {/* Product Details */}
             <div className="mt-2 flex flex-col gap-1 flex-grow">
                 <p className="text-gray-600 text-xs">PID: <span className="font-semibold">{item.key}</span></p>
-                <h2 className="text-xl font-bold text-gray-800">{item.name}</h2>
+                <h2 className="text-xl font-bold text-accent">{item.name}</h2>
                 <p className="text-gray-600 text-xs">Category: <span className="font-semibold">{item.category}</span></p>
                 <p className="text-gray-600 text-xs">Dimensions: <span className="font-semibold">{item.dimensions}</span></p>
                 
@@ -42,7 +42,7 @@ export default function ProductCard({ item }) {
 
             {/* Button Area */}
             <div className="border-t border-gray-100 p-2 w-full flex justify-center">
-                <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-xl font-semibold">
+                <button className="w-full bg-accent hover:bg-purple-600 text-white py-2 rounded-xl font-semibold">
                     Add to Cart
                 </button>
             </div>
