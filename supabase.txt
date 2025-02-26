@@ -1,0 +1,3 @@
+anon - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhamllbW5wd3JieG5kbHlkenlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAwNjczMDcsImV4cCI6MjA1NTY0MzMwN30.GMIFCit9ieBHVsBxHbWC0adX8_lA2okI4L6Nw6pHN60
+
+url - https://fajiemnpwrbxndlydzyg.supabase.co
