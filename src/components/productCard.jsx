@@ -4,7 +4,7 @@ export default function ProductCard({ item }) {
     const placeholderImage = "https://via.placeholder.com/300x200?text=No+Image";
 
     return (
-        <div className="bg-white shadow-lg p-2 w-[250px] h-[490px] transition-transform transform hover:scale-105 hover:bg-secondary flex flex-col justify-between m-1">
+        <div className="bg-white shadow-lg p-3 w-[250px] h-[440px] transition-transform transform hover:scale-105 hover:bg-secondary flex flex-col justify-between m-1">
             {/* Upper Section: Image & Details */}
             <div className="flex flex-col gap-2">
                 {/* Product Image */}
