@@ -6,7 +6,7 @@ import Testing from './components/test.jsx';
 import LoginPage from './pages/Login/login';
 import { Toaster } from 'react-hot-toast';
 import RegisterPage from './pages/register/register';
-// import TestCard from './components/testCard.jsx';
+
 
 
 
@@ -21,7 +21,7 @@ function App() {
             <Route path="/*" element={<HomePage/>}/>
             <Route path="/register" element={<RegisterPage/>}/>
             <Route path="/login" element={<LoginPage/>}/>
-            {/* <Route path="/testCard" element={<TestCard/>}/> */}
+            
         </Routes>
 
     </BrowserRouter>
