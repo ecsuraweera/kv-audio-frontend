@@ -11,7 +11,7 @@ export default function ProductCard({ item }) {
                 <img 
                     src={item.image?.[0] || placeholderImage} 
                     alt={item.name || "Product Image"} 
-                    className="w-full h-48 object-cover" // Reduced height
+                    className="w-full h-48 object-contain" // Reduced height
                 />
 
                 {/* Product Details */}
