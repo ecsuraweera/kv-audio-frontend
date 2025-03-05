@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProductCard({ item }) {
     if (!item) return null; // Prevent rendering if item is undefined
 
@@ -46,9 +48,9 @@ export default function ProductCard({ item }) {
                 </div>
 
                 {/* Button */}
-                <button className="w-full bg-accent hover:bg-purple-600 text-white py-2 rounded-xl font-semibold">
-                    Add to Cart
-                </button>
+                <Link to={"/product/" + item.key} className="w-full bg-accent hover:bg-purple-600 text-white  py-2 rounded-xl font-semibold flex justify-center items-center">
+                    View Details
+                </Link>
             </div>
         </div>
     );

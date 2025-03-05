@@ -110,8 +110,8 @@ export default function AddItemPage() {
             className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select Category</option>
-            <option value="audio">Audio</option>
-            <option value="lights">Lights</option>
+            <option value="Audio">Audio</option>
+            <option value="Lights">Lights</option>
           </select>
           <input
             onChange={(e) => setProductDimention(e.target.value)}

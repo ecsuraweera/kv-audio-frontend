@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
+import mediaUpload from "../../utils/mediaUpload";
 
 export default function UpdateItemPage() {
 
@@ -15,9 +16,23 @@ export default function UpdateItemPage() {
   const [productCategory, setProductCategory] = useState(location.state.category);
   const [productDimention, setProductDimention] = useState(location.state.dimensions);
   const [productDescription, setProductDescription] = useState(location.state.description);
+  const [productImage, setProductImage] = useState([]);
   const navigate = useNavigate();
   
   async function handleAddProduct() {
+
+    let updatingImage = location.state.image;
+
+    if(productImage.length > 0) {
+      const promises = []
+          for (let i = 0; i < productImage.length; i++) {
+            console.log(productImage[i]);
+            const promise = mediaUpload(productImage[i]);
+            promises.push(promise);
+          }
+
+          updatingImage = await Promise.all(promises);
+    }
     
     console.log(productKey, productName, productPrice, productCategory, productDimention, productDescription);
     const token = localStorage.getItem("token");
@@ -33,6 +48,7 @@ export default function UpdateItemPage() {
             category: productCategory,
             dimensions: productDimention,
             description: productDescription,
+            image: updatingImage,
           },
           {
             headers: {
@@ -104,6 +120,9 @@ export default function UpdateItemPage() {
             placeholder="Product Description"
             className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
+          <input type = "file" multiple onChange={(e)=>{setProductImage(e.target.files)}} className="border-2 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 "/>
+
+
           <button onClick = {handleAddProduct} className="bg-green-600 text-white py-3 rounded-xl hover:bg-green-900 transition-all">
             Update Product
           </button>
