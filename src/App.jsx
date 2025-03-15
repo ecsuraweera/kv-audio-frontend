@@ -8,9 +8,6 @@ import { Toaster } from 'react-hot-toast';
 import RegisterPage from './pages/register/register';
 
 
-
-
-
 function App() {
     return (
     <BrowserRouter>
